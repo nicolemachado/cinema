@@ -1,0 +1,124 @@
+/*---- BODY ----*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #1a1e2a;
+}
+
+/*---- HEADER ----*/
+
+.container header{
+  position: absolute;
+  background-color: #252832;
+  height: 140px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.container nav img{
+  width: 80px;
+  margin: 20px;
+  margin-left: 50px;
+}
+
+.container .p1{
+  margin-right: 850px;
+}
+
+p{
+  color: aliceblue;
+  margin: 60px;
+}
+
+/*------ FILMES ------*/
+
+.filmes{
+  display: flex;
+  margin-top: 60px;
+  align-items: center;
+}
+
+.filmes p{
+  margin-top: -90px;
+  text-align: center;
+}
+
+.filmes img{
+  margin: 95px;
+  max-width: 100%;
+  width: 230px;
+  height: 300px;
+}
+
+/*---- BOTÃO ----*/
+
+.btn{
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+  margin-left: 80px;
+  margin-right: 90px;
+}
+
+.btn a{
+  padding: 10px 25px;
+  color: azure;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #070818, #090436);
+}
+
+/*------ INGRESSO ------*/
+
+.ingresso{
+  margin-top: 150px;
+  background: #141720;
+  display: flex;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.ingresso img{
+  margin: 30px;
+  display: flex;
+  max-width: 100%;
+  width: 610px;
+  height: 300px;
+}
+
+/*---- AVISOS ----*/
+
+.imprimir{
+  margin-top: 10px;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+.imprimir h1{
+  font-size: 20px;
+  text-align: center;
+}
+
+/*---- IMPRIMA OU PRINT----*/
+
+.final{
+  margin-top: -60px;
+  display: flex;
+  justify-content: center;
+}
+
+.final img{
+  width: 300px;
+}
