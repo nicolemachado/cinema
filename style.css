@@ -50,51 +50,170 @@ header{
 
 /*------------------ FILME 1  -------------------*/
 
-.filmes{
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.container-1 .text{
+  color: black;
+  font-size: 22px;
   display: flex;
   margin-top: 80px;
-  margin-left: 14%;
-  width: 1000px;
-  height: 360px;
   align-items: center;
-  overflow: hidden;
-  border-radius: 20px;
-  background-color: #141720;
+  justify-content: center;
+  font-style: italic;
+  text-shadow: 2px 3px #52031a;
 }
 
-.filmes .film1{
-  margin: 40px;
+/*---- CRUELLA ANIMATED ----*/
+
+.cardzao{
+  background-image: url("./assets/bg2.png");
+  background-repeat: no-repeat;
   display: flex;
-  color: aliceblue;
+  justify-content: center;
   align-items: center;
-  flex-direction: row;
+  margin-top: 80px;
 }
 
-.filmes img{
-  width: 200px;
+.cardzao .card{
+  position: relative;
+  width: 600px;
+  height: 350px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition: 0.5s;
 }
 
-.filmes h1{
-  margin-top: -260px;
-  margin-left: 230px;
-  position: center;
-  font-size: 30px;
-  z-index: 0;
+.cardzao h1{
+  color: #c2bf04;
+  font-size: 10px;
 }
 
-.filmes p{
-  margin-left: -250px;
-  margin-top: 50px;
+.cardzao h1 .nota{
+  color: white;
+  padding: 2px 6px;
+  width: 28px;
+  border-radius: 5px;
+  background-color: #666666;
 }
 
-.filmes h1, p{
-  flex-direction: column;
-  justify-items: center;
+.cardzao .card .circle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.filmes .film1 .crIMG{
-  margin-top: 10px;
-  box-shadow: 10px 10px 5px black
+.cardzao .card .circle::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #52031a;
+  clip-path: circle(120px at center);
+  transition: 0.5s;
+}
+.cardzao:hover .card .circle:before{
+  background-color: #13161F;
+  clip-path: circle(400px at center);
+}
+
+.cardzao img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.cardzao:hover img{
+  left: 80%;
+  height: 550px;
+}
+
+.cardzao .text{
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding: 20px 20px 20px 40px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cardzao:hover .text{
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.cardzao .text p{
+  color: white;
+}
+
+.cardzao .text a{
+  padding: 10px 90px;
+  margin: 10px 0;
+  color: azure;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #55051d, #310210);
+  display: inline-block;
+  font-weight: 700;
+}
+
+@media (max-width: 991px){
+  .cardzao{
+    margin-left: 70px;
+    width: auto;
+    height: 550px;
+    max-width: 350px;
+    align-items: flex-start;
+  }
+
+  .cardzao .card{
+    height: 600px;
+  }
+
+  .cardzao:hover{
+    height: 600px;
+  }
+
+  .cardzao .text{
+    width: 100%;
+    left: 0px;
+    padding: 30px;
+  }
+
+  .cardzao img{
+    width: 430px;
+  }
+
+  .cardzao:hover img{
+    top: 70%;
+    left: 50%;
+    height: 430px;
+  }
+}
+
+@media (max-width: 420px){
+  .cardzao .text{
+    padding: 20px;
+  }
 }
 
 /*------------------ BOTÃO -----------------------*/
@@ -161,18 +280,43 @@ header{
 }
 
 .f2 .film2 img{
-  width: 190px;
+  width: 250px;
   margin-top: -60px;
   max-width: 100%;
-  height: 260px;
+  height: 360px;
   display: flex;
   justify-content: center;
 }
+
 
 .f2 .film2 h1{
   text-align: center;
   font-size: 15px;
   color: aliceblue;
+}
+
+.f2 .film2 p{
+  color: white;
+  justify-content: center;
+  margin-left: 45px;
+}
+
+.f2 .film2 .pz{
+  color: #c2bf04;
+}
+
+.notas{
+  margin-top: -22px;
+  margin-left: 150px;
+  color: white;
+  padding: 2px 4px;
+  width: 28px;
+  border-radius: 5px;
+  background-color: #666666;
+}
+
+.f2 .film2 #pzinho{
+  margin-left: 45px;
 }
 
 .f2 .film2 h1, img{
